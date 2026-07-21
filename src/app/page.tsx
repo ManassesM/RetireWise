@@ -1,3 +1,4 @@
+import Logo from '@/components/ui/Logo'
 import Image from 'next/image'
 import Link from 'next/link'
 
@@ -5,18 +6,18 @@ export default function Home() {
 	return (
 		<div className='bg-linear-to-b from-indigo-900 to-cyan-900 min-h-screen flex flex-col'>
 			<header className='flex justify-between items-centerm-4 p-6'>
-				<div className='flex items-center gap-2'>
-					<Image
-						src='/assets/arrow-growth.svg'
-						alt='Growth Arrow'
-						width={25}
-						height={25}
-						className='bg-green-700 rounded-lg p-1'
-					/>
-					<p className='text-white font-bold  text-center'>RetireWise</p>
-				</div>
-				<div className='text-slate-300 hover:text-white cursor-pointer'>
-					Sign in
+				<Logo />
+				<div className='flex  gap-2 '>
+					<Link
+						href='/login'
+						className='text-slate-300 hover:text-white cursor-pointer py-1 px-3'>
+						Sign in
+					</Link>
+					<Link
+						href='/register'
+						className='text-slate-300 hover:text-white cursor-pointer border border-white rounded-sm py-1 px-3 align-middle'>
+						Sign up
+					</Link>
 				</div>
 			</header>
 			<main className='grow flex flex-col justify-center items-center gap-2'>
