@@ -1,9 +1,13 @@
-import Image from 'next/image'
-import Logo from './ui/Logo'
+import Image from 'next/image';
+import Logo from './ui/Logo';
 
-export default function Sidebar() {
+interface AuthSidebarProps {
+  className?: string;
+}
+
+export default function AuthSidebar({ className }: AuthSidebarProps) {
 	return (
-		<section className='hidden w-1/3 px-6 py-8 border-r  border-gray-500 md:flex flex-col'>
+		<section className={`${className}`}>
 			<Logo
 				className='mb-4'
 				size={35}
